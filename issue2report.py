@@ -5,6 +5,8 @@ from datetime import date
 from core.build import Build
 from core.github import Github
 from core.template import Template
+from PyPDF4 import PdfFileMerger
+
 
 token = open(".token","r").read().strip()
 output_dir = "output"
@@ -34,9 +36,13 @@ b = Build(output_dir,frozen_opts,p,g,t)
 b.build_templates(frozen_opts["{{CUSTOMER}}"])
 
 issues = g.get_issues_by_repo()
+merger = PdfFileMerger(strict=False)
 
 for issue in issues:
     pdf_file = "{}/{}-{}.pdf".format(output_dir, issue["number"], issue["title"].strip().replace(" ","_").lower())
     md = b.generate_report_md(issue)
     p.md_to_pdf(pdf_file,md,css_file)
-p.merge_all_pdfs(report_name)
+    merger.append(fileobj=open(pdf_file, 'rb'), import_bookmarks=True)
+
+merger.write(fileobj=open(report_name, 'wb'))
+merger.close()
