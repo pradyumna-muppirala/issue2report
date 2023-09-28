@@ -7,6 +7,8 @@
     "frozen_opts" : {
         "{{RESUME}}" : "templates/resume.md",
         "{{SCOPE}}" : "templates/scope.md",
-        "{{CONCLUSION}}" : "templates/conclusion.md"
+        "{{CONCLUSION}}" : "templates/conclusion.md",
+        "{{CUSTOMER}}" : "OWASP WebGoat",
+        "{{PENTESTER_NAME}}" : "ASTICI"
     }
 }
