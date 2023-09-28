@@ -29,7 +29,7 @@ frozen_opts = {"{{DATE}}":date.today().strftime("%d/%m/%Y") }
 frozen_opts.update(customer)
 frozen_opts.update(template_frozen_opts)
 
-report_name = "OWASP_webGoat-pentest-final-report-by-{ASTICI.pdf"
+report_name = "OWASP_webGoat-pentest-final-report-by-ASTICI.pdf"
 
 b = Build(output_dir,frozen_opts,p,g,t)
 
