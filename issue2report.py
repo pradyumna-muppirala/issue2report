@@ -7,6 +7,10 @@ from core.github import Github
 from core.template import Template
 from PyPDF4 import PdfFileMerger
 
+from datetime import datetime
+
+now = datetime.now() # current date and time
+
 
 token = open(".token","r").read().strip()
 output_dir = "output"
@@ -28,8 +32,8 @@ template_frozen_opts = t.get_frozen_opts()
 frozen_opts = {"{{DATE}}":date.today().strftime("%d/%m/%Y") }
 frozen_opts.update(customer)
 frozen_opts.update(template_frozen_opts)
-
-report_name = "OWASP_webGoat-pentest-final-report-by-ASTICI.pdf"
+strNow = now.strftime("%m-%d-%Y-%H-%M-%S")
+report_name = "OWASP_webGoat-pentest-final-report-by-ASTICI-{}.pdf".format(strNow)
 
 b = Build(output_dir,frozen_opts,p,g,t)
 
