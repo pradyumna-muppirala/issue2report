@@ -44,5 +44,6 @@ for issue in issues:
     p.md_to_pdf(pdf_file,md,css_file)
     merger.append(fileobj=open(pdf_file, 'rb'), import_bookmarks=True)
 
+print(report_name)
 merger.write(fileobj=open(report_name, 'wb'))
 merger.close()
