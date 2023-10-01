@@ -41,6 +41,7 @@ b.build_templates(frozen_opts["{{CUSTOMER}}"])
 
 issues = g.get_issues_by_repo()
 merger = PdfFileMerger(strict=False)
+# Add cover into merger
 
 for issue in issues:
     pdf_file = "{}/{}-{}.pdf".format(output_dir, issue["number"], issue["title"].strip().replace(" ","_").lower())
