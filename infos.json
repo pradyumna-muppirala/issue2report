@@ -1,0 +1,5 @@
+{
+    "{{CUSTOMER}}" : "OWASP WebGoat",
+    "{{PENTESTER_NAME}}" : "ASTICI",
+    "{{YOUR_COMPANY}}"    : "ASTICI Inc."
+}

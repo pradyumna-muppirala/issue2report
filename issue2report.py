@@ -27,7 +27,7 @@ t = Template(args.template,output_dir,g)
 p = PDF(output_dir,t)
 
 css_file = "templates/{}/vulnerabilities.css".format(args.template)
-customer = json.loads(g.get_file("info.json"))
+customer = json.loads(g.get_file("infos.json"))
 template_frozen_opts = t.get_frozen_opts()
 frozen_opts = {"{{DATE}}":date.today().strftime("%d/%m/%Y") }
 frozen_opts.update(customer)
