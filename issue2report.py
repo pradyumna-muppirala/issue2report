@@ -42,12 +42,18 @@ b.build_templates(frozen_opts["{{CUSTOMER}}"])
 issues = g.get_issues_by_repo()
 merger = PdfFileMerger(strict=False)
 # Add cover into merger
+merger.append(fileobj=open(output_dir + "/cover.pdf", 'rb'), import_bookmarks=True)
+# Add intro pdf into merger
+merger.append(fileobj=open(output_dir + "/intro.pdf", 'rb'), import_bookmarks=True)
 
 for issue in issues:
     pdf_file = "{}/{}-{}.pdf".format(output_dir, issue["number"], issue["title"].strip().replace(" ","_").lower())
     md = b.generate_report_md(issue)
     p.md_to_pdf(pdf_file,md,css_file)
     merger.append(fileobj=open(pdf_file, 'rb'), import_bookmarks=True)
+
+# Add conclusion pdf into merger
+merger.append(fileobj=open(output_dir + "/conclusion.pdf", 'rb'), import_bookmarks=True)
 
 print(report_name)
 merger.write(fileobj=open(report_name, 'wb'))
