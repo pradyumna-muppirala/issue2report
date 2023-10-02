@@ -21,7 +21,7 @@ parser.add_argument("-gu", "--github-user", action = "store", dest = "github_use
 parser.add_argument("-gr", "--github-repo", action = "store", dest = "github_repo",required = True, help = "Github Repository name")
 
 args = parser.parse_args()
-
+print(token)
 g = Github(token,args.github_user,args.github_repo)
 t = Template(args.template,output_dir,g)
 p = PDF(output_dir,t)
