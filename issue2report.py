@@ -47,7 +47,6 @@ merger.append(fileobj=open(output_dir + "/cover.pdf", 'rb'), import_bookmarks=Tr
 merger.append(fileobj=open(output_dir + "/intro.pdf", 'rb'), import_bookmarks=True)
 
 for issue in issues:
-    print(issue)
     pdf_file = "{}/{}-{}.pdf".format(output_dir, issue["number"], issue["title"].strip().replace(" ","_").lower())
     md = b.generate_report_md(issue)
     p.md_to_pdf(pdf_file,md,css_file)
