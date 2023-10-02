@@ -24,6 +24,7 @@ class Github(object):
 
     def get_file(self,file_path):
         url = "{}/repos/{}/{}/contents/{}".format(self.base_url,self.username,self.repo,file_path)
+        print("JSON config file URL : " + url)
         r = requests.get(url,headers=self.headers)
         return r.text
 
