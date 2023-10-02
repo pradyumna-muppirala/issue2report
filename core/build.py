@@ -23,6 +23,7 @@ class Build(object):
     def generate_report_md(self,issue):
         body = []
         body.append("# {}".format(issue["title"]))
+        body.append("GitHub Issue number # {}".format(issue["number"]))
         body.extend(self.g.get_labels(issue["labels"]))
         body.append(issue["body"])
         body.extend(self.g.get_comments_by_issue(issue["comments_url"]))
