@@ -1,1 +1,6 @@
  - CI/CD deployed OWASP Webgoat instance, deployed through Terraform scripts on Azure
+ - Covering sample OWASP vulnerabilities
+ - Covering Nmap scan
+ - Attempting exploit OWASP Webgoat webserver using readily available Metasploit exploits
+ - Staic code analysis using SonarCloud
+ - Software Composition Analysis using Snyk

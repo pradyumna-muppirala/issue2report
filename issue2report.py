@@ -34,7 +34,7 @@ frozen_opts.update(customer)
 frozen_opts.update(template_frozen_opts)
 strNow = now.strftime("%m-%d-%Y-%H-%M-%S")
 report_name = "OWASP_webGoat-pentest-final-report-by-ASTICI.pdf"
-
+print(frozen_opts)
 b = Build(output_dir,frozen_opts,p,g,t)
 
 b.build_templates(frozen_opts["{{CUSTOMER}}"])

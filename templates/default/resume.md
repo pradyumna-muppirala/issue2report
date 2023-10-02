@@ -1,1 +1,1 @@
-ASTICI Inc. is a start-up researching on Github actions repository technology to enable automated security testing.
+ASTICI Inc. is a start-up researching on Github actions repository technology to enable automated security testing for cloud native web applications.
