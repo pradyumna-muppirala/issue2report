@@ -10,7 +10,6 @@
         "{{CONCLUSION}}" : "templates/conclusion.md",
         "{{CUSTOMER}}" : "OWASP_WebGoat.md",
         "{{PENTESTER_NAME}}" : "ASTICI.md",
-        "{{YOUR_COMPANY}}"    : "ASTICI_Inc.md",
-        "{{LOGO}}": "ASTICI_PenTest.png"
+        "{{YOUR_COMPANY}}"    : "ASTICI_Inc.md"
     }
 }
