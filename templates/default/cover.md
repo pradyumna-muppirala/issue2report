@@ -1,4 +1,4 @@
-![Logo](./ASTICI_PenTest.png)
+![Logo](../../ASTICI_PenTest.png)
 <br>
 <br>
 <br>
