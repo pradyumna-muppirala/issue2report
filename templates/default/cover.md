@@ -1,4 +1,4 @@
-![Logo](./ASTICI_PenTest.png)
+![Logo]({{LOGO}})
 <br>
 <br>
 <br>
