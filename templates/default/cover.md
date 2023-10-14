@@ -1,4 +1,4 @@
-![Logo](../../ASTICI_PenTest.png)
+![Logo](https://i.imgur.com/Rs9DVsu.png)
 <br>
 <br>
 <br>
