@@ -1,4 +1,4 @@
-![Logo](https://drive.google.com/file/d/1tzMPwocKw_YtqpZtwNXwr7HtFIfgHMca/view?usp=sharing)
+![Logo](https://www.dropbox.com/scl/fi/yxzq48s8135l5c6x7kv8z/ASTICI_PenTest.png?rlkey=5mzf2hqs78ot3gszydt8n1h28&dl=0)
 <br>
 <br>
 <br>
