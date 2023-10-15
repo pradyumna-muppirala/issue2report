@@ -24,6 +24,7 @@ class Build(object):
         body = []
         body.append("# {}".format(issue["title"]))
         body.append("<P>GitHub Issue number # {} </P>".format(issue["number"]))
+        body.append("<P>Issue priority: {} </P>".format(issue["priority"]))
         body.append("<P>GitHub Issue URL : <a href='https://github.com/{}/{}/issues/{}'>Here!</a> </P> ".format(self.g.username, self.g.repo, issue["number"]))
         body.extend(self.g.get_labels(issue["labels"]))
         body.append(issue["body"])
